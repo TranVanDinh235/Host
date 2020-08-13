@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_100sdp"
+        android:paddingLeft="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/layout_facilities_num_room_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Số phòng"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorText3"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/layout_facilities_bedroom_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Số phòng ngủ"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bedroom_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bedroom_container" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_facilities_bedroom_container"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:cardElevation="1dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintEnd_toStartOf="@+id/layout_facilities_bedroom_add"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_num_room_label">
+
+            <EditText
+                android:id="@+id/layout_facilities_bedroom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_transparent"
+                android:fontFamily="@font/lora"
+                android:inputType="number"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/layout_facilities_bedroom_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bedroom_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bedroom_container" />
+
+        <ImageView
+            android:id="@+id/layout_facilities_bedroom_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bedroom_container"
+            app:layout_constraintEnd_toStartOf="@+id/layout_facilities_bedroom_container"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bedroom_container" />
+
+        <TextView
+            android:id="@+id/layout_facilities_bathroom_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Số phòng tắm"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bathroom_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bathroom_container" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_facilities_bathroom_container"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:cardElevation="1dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintEnd_toStartOf="@+id/layout_facilities_bathroom_add"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_bedroom_container">
+
+            <EditText
+                android:id="@+id/layout_facilities_bathroom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_transparent"
+                android:fontFamily="@font/lora"
+                android:inputType="number"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/layout_facilities_bathroom_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bathroom_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bathroom_container" />
+
+        <ImageView
+            android:id="@+id/layout_facilities_bathroom_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bathroom_container"
+            app:layout_constraintEnd_toStartOf="@+id/layout_facilities_bathroom_container"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bathroom_container" />
+
+        <TextView
+            android:id="@+id/layout_facilities_bed_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Số giường"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bed_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bed_container" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_facilities_bed_container"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:cardElevation="1dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintEnd_toStartOf="@+id/layout_facilities_bathroom_add"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_bathroom_container">
+
+            <EditText
+                android:id="@+id/layout_facilities_bed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_transparent"
+                android:fontFamily="@font/lora"
+                android:inputType="number"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/layout_facilities_bed_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bed_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bed_container" />
+
+        <ImageView
+            android:id="@+id/layout_facilities_bed_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_facilities_bed_container"
+            app:layout_constraintEnd_toStartOf="@+id/layout_facilities_bed_container"
+            app:layout_constraintTop_toTopOf="@+id/layout_facilities_bed_container" />
+
+        <TextView
+            android:id="@+id/layout_facilities_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/facilities"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_bed_container"
+            android:layout_marginTop="@dimen/_16sdp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_facilities_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_label">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/wifi"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_air_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/air_condition"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_shampoo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/shampoo"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_mineral_water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/mineral_water"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_soap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/soap"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_dryer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/dryer"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_free_breakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/free_breakfast"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/tv"
+                        android:fontFamily="@font/lora"
+                        android:textSize="@dimen/_13sdp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_washing_machine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/washing_machine"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_tissue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/tissue"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_toothpaste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/toothpaste"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_towel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/towel"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_conditioner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/conditioner"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_shower_gel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:text="@string/shower_gel"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/layout_facilities_room_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/room_facilities"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorText3"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_facilities_container" />
+
+        <LinearLayout
+            android:id="@+id/layout_facilities_room_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_room_label">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_window"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/window"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_balcony"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/balcony"
+                        android:fontFamily="@font/lora"
+                        android:textSize="@dimen/_13sdp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/layout_facilities_kitchen_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/kitchen_facilities"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorText3"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_facilities_room_container" />
+
+        <LinearLayout
+            android:id="@+id/layout_facilities_kitchen_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_kitchen_label">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_electric_stove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/electric_stove"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_microwave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/microwave"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_fridge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/fridge"
+                        android:fontFamily="@font/lora"
+                        android:textSize="@dimen/_13sdp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/layout_facilities_special_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/special_facilities"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorText3"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_facilities_kitchen_container" />
+
+        <LinearLayout
+            android:id="@+id/layout_facilities_special_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_special_label">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_smart_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/smart_TV"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/layout_facilities_entertainment_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/entertainment"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorText3"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_facilities_special_container" />
+
+        <LinearLayout
+            android:id="@+id/layout_facilities_entertainment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_entertainment_label">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_landscape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/landscape"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_golf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/golf"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_pool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/pool"
+                        android:fontFamily="@font/lora"
+                        android:textSize="@dimen/_13sdp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_BBQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/BBQ"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/layout_facilities_families_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/families"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorText3"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_facilities_entertainment_container" />
+
+        <LinearLayout
+            android:id="@+id/layout_facilities_families_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_facilities_families_label">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_no_smoking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/no_smoking"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/lora"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/layout_facilities_children"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CheckBoxTheme"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/children"
+                        android:fontFamily="@font/lora"
+                        android:textSize="@dimen/_13sdp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/layout_facilities_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:text="Tiếp tục"
+            android:textAlignment="center"
+            app:elevation="4dp"
+            android:fontFamily="@font/lora_bold"
+            android:textSize="@dimen/_13sdp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/layout_facilities_families_container"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

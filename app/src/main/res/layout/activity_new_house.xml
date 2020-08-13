@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/layout_new_house_back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/layout_new_house_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lora_bold"
+        android:text="Thêm một ngôi nhà mới"
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_new_house_back_icon"
+        app:layout_constraintStart_toEndOf="@+id/layout_new_house_back_icon"
+        app:layout_constraintTop_toTopOf="@+id/layout_new_house_back_icon" />
+
+    <ImageView
+        android:id="@+id/layout_new_house_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_house"
+        android:layout_marginStart="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_new_house_title"
+        app:layout_constraintStart_toEndOf="@+id/layout_new_house_title"
+        app:layout_constraintTop_toTopOf="@+id/layout_new_house_title" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/layout_new_house_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layout_new_house_title"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/tab_text" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/layout_new_house_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layout_new_house_tab_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

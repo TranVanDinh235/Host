@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_100sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/layout_booking_guest_photo"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_booking_guest_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_booking_title"
+            android:layout_marginEnd="@dimen/_16sdp"
+            tools:src="@drawable/img_temp"/>
+
+        <TextView
+            android:id="@+id/layout_booking_guest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Khách hàng: TVD"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_title" />
+
+        <TextView
+            android:id="@+id/layout_booking_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Đơn đặt phòng"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_close" />
+
+        <ImageView
+            android:id="@+id/layout_booking_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/layout_booking_house_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/house"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_guest_name" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_booking_house"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_house_title"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <ImageView
+                android:id="@+id/layout_booking_photo"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_temp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/layout_booking_title_house"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/lora_bold"
+                android:maxLines="2"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toEndOf="@+id/layout_booking_photo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="nha rat dep" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_booking_house"/>
+
+        <TextView
+            android:id="@+id/layout_booking_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/date_and_guest"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_booking_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layout_booking_date_title"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            >
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@color/gray50_300"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_24sdp"/>
+
+            <TextView
+                android:id="@+id/layout_booking_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/lora"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view"
+                android:text="Chọn ngày:" />
+
+            <TextView
+                android:id="@+id/layout_booking_date_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/_120sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_booking_date_label"
+                android:text="Th3 20/07"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/lora_bold"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textSize="@dimen/_13sdp"/>
+
+            <TextView
+                android:id="@+id/layout_booking_date_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lora_bold"
+                android:maxWidth="@dimen/_120sdp"
+                android:text="- Th5 22/07"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toStartOf="@+id/view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_booking_date_start" />
+
+            <TextView
+                android:id="@+id/layout_booking_room_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số phòng:"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/lora"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/layout_booking_num_guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/_120sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/layout_booking_room_label"
+                android:text="2 Phòng - 2 Nngười lớn - 1 Trẻ em"
+                android:fontFamily="@font/lora_bold"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textSize="@dimen/_13sdp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_booking_container"/>
+
+        <TextView
+            android:id="@+id/layout_booking_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="@string/cost"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            android:layout_marginStart="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/layout_booking_price_one_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:text="@string/price"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_cost" />
+
+        <TextView
+            android:id="@+id/layout_booking_price_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="100000đ"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_cost" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_price_one_label"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            />
+
+        <TextView
+            android:id="@+id/layout_booking_num_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:text="@string/num_of_night"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            android:layout_marginTop="@dimen/_12sdp"/>
+
+        <TextView
+            android:id="@+id/layout_booking_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="2 đêm"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_num_label"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            />
+
+        <TextView
+            android:id="@+id/layout_booking_total_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:text="@string/total_price"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/layout_booking_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="2000000"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_total_label"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            />
+
+        <TextView
+            android:id="@+id/layout_booking_additional_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:text="@string/additional_fee"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <TextView
+            android:id="@+id/layout_booking_additional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="0đ"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_additional_label"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            />
+
+        <TextView
+            android:id="@+id/layout_booking_promotion_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:text="@string/promotion"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <TextView
+            android:id="@+id/layout_booking_promotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="0đ"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50_300"
+            app:layout_constraintTop_toBottomOf="@+id/layout_booking_promotion_label"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"            />
+
+
+        <TextView
+            android:id="@+id/layout_booking_price_final_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:text="@string/final_price"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+        <TextView
+            android:id="@+id/layout_booking_price_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lora_bold"
+            android:text="2000000đ"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

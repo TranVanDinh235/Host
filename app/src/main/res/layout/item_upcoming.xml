@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_upcoming_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/lora"
+        tools:text="Th3 23/06 - Th4 24/06"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        app:cardElevation="3dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rishabhharit.roundedimageview.RoundedImageView
+                android:id="@+id/item_upcoming_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_temp"
+                app:cornerRadius="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundedCorners="topLeft|topRight" />
+
+            <TextView
+                android:id="@+id/item_upcoming_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/lora_bold"
+                android:lines="2"
+                android:maxLines="2"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_upcoming_photo"
+                tools:text="nha rat sach " />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_upcoming_guest_photo"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                app:layout_constraintStart_toStartOf="@+id/item_upcoming_title"
+                app:layout_constraintTop_toBottomOf="@id/item_upcoming_title"
+                android:layout_marginTop="@dimen/_6sdp"
+                tools:src="@drawable/img_temp"/>
+
+            <TextView
+                android:id="@+id/item_upcoming_guest_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/lora"
+                app:layout_constraintTop_toTopOf="@id/item_upcoming_guest_photo"
+                app:layout_constraintStart_toEndOf="@+id/item_upcoming_guest_photo"
+                android:layout_marginStart="@dimen/_6sdp"
+                tools:text="Kh:TRan Van Dinh"
+                android:layout_marginTop="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/item_upcoming_num_guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/lora"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintStart_toEndOf="@+id/item_upcoming_guest_photo"
+                app:layout_constraintTop_toBottomOf="@+id/item_upcoming_guest_name"
+                tools:text="3 nguoi lon - 2 tre em" />
+
+            <TextView
+                android:id="@+id/item_upcoming_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:fontFamily="@font/lora"
+                android:gravity="center"
+                android:text="Chưa Check in"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_upcoming_guest_photo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

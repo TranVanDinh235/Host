@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <com.rishabhharit.roundedimageview.RoundedImageView
+        android:id="@+id/item_photo_imv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCorners="all"
+        app:cornerRadius="@dimen/_10sdp"
+        tool:src="@drawable/img_temp" />
+
+    <ImageView
+        android:id="@+id/item_photo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toTopOf="@+id/item_photo_imv"
+        app:layout_constraintEnd_toEndOf="@+id/item_photo_imv"
+        app:layout_constraintStart_toEndOf="@+id/item_photo_imv"
+        app:layout_constraintTop_toTopOf="@+id/item_photo_imv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

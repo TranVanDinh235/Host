@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bottom_sheet_image_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lora_bold"
+        android:gravity="center"
+        android:textColor="@color/colorText3"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="Camera"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@color/gray50_300"/>
+
+    <TextView
+        android:id="@+id/bottom_sheet_image_galley"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lora_bold"
+        android:gravity="center"
+        android:textColor="@color/colorText3"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="Thư viện"/>
+</LinearLayout>
